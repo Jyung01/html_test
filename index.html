@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>K-Market</title>
+        <link rel="stylesheet" href="./css/index1.css" />
+    </head>
+    <body>
+        <!-- Top utility bar -->
+        <div class="top-bar">
+            <div class="inner">
+                <a href="#">고객센터</a>
+                <a href="#">판매자센터</a>
+                <a href="#">앱 다운로드</a>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header>
+            <a href="#" class="logo">K<span>market</span></a>
+            <div class="search-box">
+                <input type="text" placeholder="상품, 브랜드를 검색해보세요" />
+                <button aria-label="검색">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M21 21l-4.35-4.35m1.35-5.65a7 7 0 11-14 0 7 7 0 0114 0z"
+                            stroke="#fff"
+                            stroke-width="2"
+                            fill="none"
+                            stroke-linecap="round"
+                        />
+                    </svg>
+                </button>
+            </div>
+            <nav class="header-links">
+                <a href="#login">로그인</a>
+                <a href="#join">회원가입</a>
+                <a href="#mypage">마이페이지</a>
+                <a href="#cart">🛒 장바구니</a>
+            </nav>
+        </header>
+
+        <!-- GNB -->
+        <nav class="gnb">
+            <div class="gnb-inner">
+                <a href="#hit" class="active">히트상품</a>
+                <a href="#recommend">추천상품</a>
+                <a href="#new">최신상품</a>
+                <a href="#popular">인기상품</a>
+                <a href="#discount">할인상품</a>
+            </div>
+        </nav>
+
+        <!-- Top banner -->
+        <div class="banner">
+            <div class="banner-img">
+                <div class="banner-text">
+                    <h2>오늘 하루, 특별한 가격</h2>
+                    <p>K market 단독 타임특가 · 무료배송 혜택</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main layout -->
+        <div class="main-layout">
+            <!-- Side category -->
+            <aside class="side-cat">
+                <h3>카테고리</h3>
+                <ul>
+                    <li>
+                        <a href="#"><span class="icon">👕</span> 패션·의류·뷰티</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="icon">💻</span> 가전·디지털</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="icon">🍎</span> 식품·생필품</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="icon">🏠</span> 홈·문구·취미</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- Visual slider -->
+            <div class="visual">
+                <div class="visual-main">
+                    <div class="ph">
+                        <div class="mtn">🏔️</div>
+                        <p>메인 비주얼 배너 (1280 x 320)</p>
+                    </div>
+                    <div class="dots">
+                        <span></span><span></span><span class="active"></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Best products -->
+        <section class="sec">
+            <div class="sec-head">
+                <h2>베스트 상품</h2>
+                <span class="more">더보기 ›</span>
+            </div>
+            <div class="best-grid">
+                <div class="best-main">
+                    <div class="thumb">
+                        <span class="rank-badge">01</span>
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="#ccc">
+                            <path
+                                d="M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"
+                            />
+                        </svg>
+                    </div>
+                    <div class="info">
+                        <div class="name">베스트 1위 인기상품 이름이 들어가는 영역입니다</div>
+                        <div class="price-row">
+                            <span class="coupon-label">쿠폰적용가</span>
+                            <span class="old-price">30,000원</span>
+                            <span class="discount">10%</span>
+                            <span class="price">27,000원</span>
+                        </div>
+                        <div class="reward">꼭멤버 최대 <b>1,350원</b> 적립</div>
+                        <span class="free-ship">무료배송</span>
+                    </div>
+                </div>
+                <div class="best-list">
+                    <!-- generate items 2-5 -->
+                    SCRIPT_BEST_PLACEHOLDER
+                </div>
+            </div>
+        </section>
+
+        <!-- Hit products -->
+        <section class="sec" id="hit">
+            <div class="sec-head">
+                <h2>히트상품</h2>
+                <span class="more">더보기 ›</span>
+            </div>
+            <p class="sec-sub">상품 썸네일(thumb2) 기준, 조회수가 많은 순서로 8건 출력</p>
+            <div class="hit-grid">SCRIPT_HIT_PLACEHOLDER</div>
+        </section>
+
+        <!-- Recommended products -->
+        <section class="sec" id="recommend">
+            <div class="sec-head">
+                <h2>추천상품</h2>
+                <span class="more">더보기 ›</span>
+            </div>
+            <p class="sec-sub">상품평점이 높은 순서로 8건 출력</p>
+            <div class="hit-grid" id="recommendGrid"></div>
+        </section>
+
+        <!-- New products -->
+        <section class="sec" id="new">
+            <div class="sec-head">
+                <h2>최신상품</h2>
+                <span class="more">더보기 ›</span>
+            </div>
+            <p class="sec-sub">상품 등록 날짜가 최신 순서로 8건 출력</p>
+            <div class="hit-grid" id="newGrid"></div>
+        </section>
+
+        <!-- Discount products -->
+        <section class="sec" id="discount">
+            <div class="sec-head">
+                <h2>할인상품</h2>
+                <span class="more">더보기 ›</span>
+            </div>
+            <p class="sec-sub">할인율(discount)이 많은 순서로 8건 출력</p>
+            <div class="hit-grid" id="discountGrid"></div>
+        </section>
+
+        <!-- Member menu -->
+        <section class="sec" id="member-menu">
+            <div class="member-box">
+                <div class="member-text">
+                    <h3>회원이 되면 더 많은 혜택이 기다려요</h3>
+                    <p>로그인하면 맞춤 추천 상품과 쿠폰 혜택을 확인할 수 있어요.</p>
+                </div>
+                <div class="member-actions">
+                    <a href="#login" class="btn btn-primary">로그인</a>
+                    <a href="#join" class="btn btn-outline">회원가입</a>
+                    <a href="#mypage" class="btn btn-outline">마이페이지</a>
+                    <a href="#admin" class="btn btn-admin">관리자 페이지</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-inner">
+                <nav class="footer-links">
+                    <a href="#about" id="about">회사소개</a>
+                    <a href="#terms">서비스이용약관</a>
+                    <a href="#privacy">개인정보처리방침</a>
+                    <a href="#finance">전자금융거래약관</a>
+                </nav>
+                <div class="footer-info">
+                    <p>K market(주) · 대표 : 김철학 · 사업자등록번호 000-00-00000</p>
+                    <p>주소 : 서울특별시 어딘가 123 K마켓빌딩 · 고객센터 1234-5678</p>
+                </div>
+                <p class="copyright">Copyright © 2025 김철학. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script>
+            const cardSVG = `<svg viewBox="0 0 24 24" fill="#ccc"><path d="M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>`;
+
+            function makeCard(rank) {
+                const div = document.createElement("div");
+                div.className = "card";
+                div.innerHTML = `
+    <div class="thumb">${cardSVG}</div>
+    <div class="info">
+      <div class="name">상품명 ${rank}위 - 상품 설명 영역</div>
+      <div class="price-row">
+        <span class="old-price">30,000원</span>
+        <span class="discount">10%</span>
+        <span class="price">27,000원</span>
+      </div>
+      <span class="free-ship">무료배송</span>
+    </div>`;
+                return div;
+            }
+
+            const bestList = document.querySelector(".best-list");
+            bestList.innerHTML = "";
+            for (let i = 2; i <= 5; i++) bestList.appendChild(makeCard(i));
+
+            const hitGrid = document.querySelector(".hit-grid");
+            hitGrid.innerHTML = "";
+            for (let i = 1; i <= 8; i++) hitGrid.appendChild(makeCard(i));
+
+            ["recommendGrid", "newGrid", "discountGrid"].forEach((id) => {
+                const grid = document.getElementById(id);
+                for (let i = 1; i <= 8; i++) grid.appendChild(makeCard(i));
+            });
+        </script>
+    </body>
+</html>
